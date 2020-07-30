@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card_name: MyString
+  image_src: MyString
+  description: MyString
+  note: MyString
+  deck_id: 1
+  user_id: 1
+
+two:
+  card_name: MyString
+  image_src: MyString
+  description: MyString
+  note: MyString
+  deck_id: 1
+  user_id: 1
