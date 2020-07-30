@@ -10,7 +10,7 @@ class DecksController < ApplicationController
     end 
 
     def create
-        @deck = Deck.create(card_params)
+        @deck = Deck.create(deck_params)
         if @deck.save
             render json: @deck
         else

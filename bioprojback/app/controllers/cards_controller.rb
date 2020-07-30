@@ -12,10 +12,13 @@ class CardsController < ApplicationController
     def create
         @card = Card.create(card_params)
         if @card.save
+            @deckcard = DeckCard.create(deckcard_params)
             render json: @card
         else
             render json: {errors:@card.full_message}, status:400
-        end 
+        end
+
+
     end 
 
     def destroy 
@@ -37,7 +40,14 @@ class CardsController < ApplicationController
     private 
 
     def card_params 
-        params.permit(:card_name, :image_src, :description, :note)
+        params.require(:card).permit(:card_name, :image_src, :description, :note, :deck_ids => [])
+
     end 
+
+    def deckcard_params 
+        params.permit(:card_id, :deck_id)
+    end 
+
+
     
 end
