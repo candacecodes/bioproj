@@ -18,21 +18,17 @@
 
 <div class="card-container" >
     <div class="card">
-      <p class="card_name">Cell Name</p>
+      <p id="card-name">Cell Name</p>
       <div class="grid-container">
   
         <div class="image">
-            <img src="https://www.genome.gov/sites/default/files/tg/en/illustration/ribosome.jpg" alt="" class="card_image" width="300" height="300">
+            <img id="image-src" src="https://www.genome.gov/sites/default/files/tg/en/illustration/ribosome.jpg" alt="" class="card_image" width="300" height="300">
         </div>
   
-        <div class="description">
+        <div id="description">
           Cell Description
         </div>
   
-      </div>
-      <button class="btn draw-border">Edit</button>
-      <button class="btn draw-border">Delete</button>
-    </div>
 
 <br><br>
 
@@ -41,9 +37,22 @@
 </div>
 
 <div class="list-cards">
-  <p id="single-card-name">Card 1 Example</p> 
-<button class="btn draw-border">Create A Card</button>
+  <p id="single-card-name"></p> 
 </div>
+
+<h2>Create a Card</h2>
+
+<form id=create-card-form action="">
+  <label for="card-name">Organelle name:</label><br>
+  <input type="text" name="cardName" value=""><br>
+   <label for="image-src">Image URL:</label><br>
+  <input type="text" name="imageSrc" value=""><br>
+  <label for="description">Description:</label><br>
+  <input type="text" name="description" value=""><br>
+   <label for="note">Note:</label><br>
+  <input type="text" name="note" value=""><br><br>
+  <input type="submit" value="Submit">
+</form> 
     
 
 </body>

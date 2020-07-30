@@ -1,3 +1,7 @@
+User.destroy_all
+Deck.destroy_all
+Card.destroy_all
+
 user1 = User.create(username: "username1")
 
 deck1 = Deck.create(deck_name: "deck1", user_id: 1) 
