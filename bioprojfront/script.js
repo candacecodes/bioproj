@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Display available bio card names
     function renderCardNames(card){
-        let singleCardName = document.querySelector('single-card-name')
+        let singleCardName = document.getElementById('single-card-name')
         let div = document.createElement('div')
         div.id = card.id 
         div.innerText = ``
