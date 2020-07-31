@@ -16,31 +16,29 @@ function renderDecks(deck){
     div.innerHTML = `
     <p>${deck.deck_name}</p>`
     deckCard.appendChild(div)
+
+    let deleteDeckBtn = document.createElement("BUTTON");
+    deleteDeckBtn.innerText = "Delete Deck"
+    deckCard.appendChild(deleteDeckBtn);
+
+    deleteDeckBtn.addEventListener("click", () => deleteDeck(deck))
 }
 
-// function deleteDeck(deck) {
-//     fetch(`http://localhost:3000/decks/${deck.id}`,{
-//       method:'DELETE'
-//     })
-//     .then(res => res.json())
-//     .then(json=>{
-//      let cardName = document.getElementById('card-name')
-//      let imageSrc = document.getElementById('image-src')
-//      let description = document.getElementById('description')
 
-//      let editBtn = document.getElementById('edit-btn')
-//      let deleteBtn = document.getElementById('delete-btn')
+function deleteDeck(deck) {
+    fetch(`http://localhost:3000/decks/11`,{
+      method:'DELETE'
+    })
+    .then(res => res.json())
+    .then(json => {
+     let deckName = document.getElementById('deck-card-display')
+     deckName.innerText = `` 
 
-
-//      cardName.innerText = `` 
-//      imageSrc.src = `` 
-//      description.innerText = ``
-
-//  })
+ })
 
  // update the available bio cards => pessimistic rendering 
 
-// }
+}
 
 //cards 
     fetch('http://localhost:3000/cards')
@@ -114,7 +112,7 @@ function renderDecks(deck){
          method:'DELETE'
        })
        .then(res => res.json())
-       .then(json=>{
+       .then(json => {
         let cardName = document.getElementById('card-name')
         let imageSrc = document.getElementById('image-src')
         let description = document.getElementById('description')
