@@ -1,6 +1,6 @@
 # bioproj
 
-Still a work in progress. Put on hold after 3 days. 
+Put on hold after 3 days. 
 
 Bio flashcards. But make it tech. And genetics. And molecular bio. 
 
